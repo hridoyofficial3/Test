@@ -64,7 +64,7 @@ jobs:
           mkdir -p site-app
           cat > site-app/build.gradle <<'__SITEAPP_EOF__'
           plugins {
-              id 'com.android.application' version '8.7.3' apply false
+              id 'com.android.application' version '8.10.1' apply false
           }
           __SITEAPP_EOF__
           mkdir -p site-app
@@ -72,6 +72,7 @@ jobs:
           org.gradle.jvmargs=-Xmx3g -Dfile.encoding=UTF-8
           android.useAndroidX=true
           android.nonTransitiveRClass=true
+          android.suppressUnsupportedCompileSdk=36
           __SITEAPP_EOF__
           mkdir -p site-app/app
           cat > site-app/app/build.gradle <<'__SITEAPP_EOF__'
@@ -84,7 +85,7 @@ jobs:
 
           android {
               namespace 'com.hridoy.siteapp'
-              compileSdk 35
+              compileSdk 36
 
               defaultConfig {
                   applicationId prop('appId', 'com.hridoy.site.demo')
@@ -394,7 +395,7 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.9"
+          gradle-version: "8.13"
 
       - name: Build release APK
         working-directory: site-app
