@@ -250,7 +250,7 @@ jobs:
                       @Override
                       public void onFullScreen(GeckoSession s, boolean on) {
                           fullScreen = on;
-                          setImmersive(on);
+                          applyImmersive(on);
                       }
                   });
 
@@ -276,7 +276,7 @@ jobs:
               }
 
               @SuppressWarnings("deprecation")
-              private void setImmersive(boolean on) {
+              private void applyImmersive(boolean on) {
                   View d = getWindow().getDecorView();
                   d.setSystemUiVisibility(on
                           ? (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
