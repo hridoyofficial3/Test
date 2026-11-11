@@ -1,0 +1,17 @@
+# secrets / env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# user backups must never be committed (contain site lists + encrypted vault data)
+heart-orbit-backup*.json
+cache-*.dat
+heart-orbit-sites.csv
+heart-orbit-bookmarks.html
+# misc
+node_modules/
+.DS_Store
+# apk build (generated in CI)
+android/
+www/

@@ -1,0 +1,11 @@
+{
+  "appId": "com.hridoy.heartorbit",
+  "appName": "Heart Orbit",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "android": { "backgroundColor": "#0c0b16" },
+  "plugins": {
+    "CapacitorHttp": { "enabled": true },
+    "LocalNotifications": { "smallIcon": "ic_stat_heart", "iconColor": "#a78bfa" }
+  }
+}
